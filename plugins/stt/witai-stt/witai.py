@@ -26,7 +26,8 @@ class WitAiSTTPlugin(plugin.STTPlugin):
             language = self.profile['language']
         except KeyError:
             language = 'en-US'
-            language = language.split('-')[0]
+        
+	language = language.split('-')[0]
 
     @property
     def token(self):
