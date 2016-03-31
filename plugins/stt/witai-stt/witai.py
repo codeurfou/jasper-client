@@ -26,8 +26,7 @@ class WitAiSTTPlugin(plugin.STTPlugin):
             language = self.profile['language']
         except KeyError:
             language = 'en-US'
-        if language.split('-')[0] != 'en':
-            raise ValueError("Languages other than English are not supported")
+            language = language.split('-')[0]
 
     @property
     def token(self):
